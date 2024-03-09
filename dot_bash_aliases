@@ -35,7 +35,8 @@ alias v='vim'
 
 #chezmoi aliases
 alias cm="chezmoi"
-alias cme='vim ~/.local/share/chezmoi/"$(ls ~/.local/share/chezmoi/ | fzf)" && chezmoi diff'
+# alias cme='vim ~/.local/share/chezmoi/"$(ls ~/.local/share/chezmoi/ | fzf)" && chezmoi diff'
+alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
 alias cmd="chezmoi diff"
 alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
 
