@@ -1,5 +1,5 @@
 # .bashrc
-echo chezmoi test success
+
 #normal stuffs
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"

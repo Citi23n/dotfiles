@@ -22,7 +22,7 @@ alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/
 # vim and programming aliases
 alias zprog="cd ~/Programming/"
 alias nv="nvim"
-alias v='nvim'
+alias v='vim'
 #alias viminit="nvim ~/.config/nvim/init.vim"
 #alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 #alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
