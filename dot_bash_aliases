@@ -2,6 +2,7 @@
 
 # apropos -s 1 "" | shuf -n 1  #Random command
 alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
+alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
 # alias nf='clear ; neofetch --ascii_distro PacBSD'
 alias nf='clear ; neofetch --ascii_distro Anarchy'
 alias x='exit'
@@ -34,6 +35,9 @@ alias v='vim'
 
 #chezmoi aliases
 alias cm="chezmoi"
+alias cme='vim ~/.local/share/chezmoi/"$(ls ~/.local/share/chezmoi/ | fzf)"'
+alias cmd="chezmoi diff"
+alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' "
 
 # esoteric aliases
 #alias startvpn='sudo openvpn --config /etc/openvpn/server/"$(ls /etc/openvpn/server/ | fzf)"'
