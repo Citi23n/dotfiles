@@ -37,7 +37,7 @@ alias v='vim'
 alias cm="chezmoi"
 alias cme='vim ~/.local/share/chezmoi/"$(ls ~/.local/share/chezmoi/ | fzf)"'
 alias cmd="chezmoi diff"
-alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' "
+alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
 
 # esoteric aliases
 #alias startvpn='sudo openvpn --config /etc/openvpn/server/"$(ls /etc/openvpn/server/ | fzf)"'
