@@ -47,7 +47,18 @@ alias wddg="w3m duckduckgo.com"
 alias open='xdg-open'
 
 # functions
-function cheat() { curl cheat.sh/$1; }   #cheat sheet
+#function cheat() { curl cheat.sh/$1; }   #cheat sheet
+function cheat() {
+	if [ $# -eq 0 ]; then
+		echo "No arguments provided"
+	elif [ $# -eq 1 ]; then
+		curl cheat.sh/$1
+	else
+		cmd=$1		
+		shift		
+		tgpt "How do I $* with $cmd in linux?"
+	fi
+}
 function cht() { curl cht.sh/$1; }   #cht sheet
 function fzz() { $* | fzf -e -i | xclip -sel clip; } #fuzzy command and copy to clipboard
 function lss() { $* | xargs echo; } #pipe command to less
