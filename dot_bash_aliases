@@ -1,7 +1,6 @@
 # general aliases
 
-# apropos -s 1 "" | shuf -n 1  #Random command
-alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
+#alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
 # alias nf='clear ; neofetch --ascii_distro PacBSD'
 alias nf='clear ; neofetch --ascii_distro Anarchy'
@@ -21,7 +20,7 @@ alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/
 # alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
 
 # vim and programming aliases
-alias zprog="cd ~/Programming/"
+#alias zprog="cd ~/Programming/"
 alias nv="nvim"
 alias v='vim'
 #alias viminit="nvim ~/.config/nvim/init.vim"
@@ -35,15 +34,14 @@ alias v='vim'
 
 #chezmoi aliases
 alias cm="chezmoi"
-# alias cme='vim ~/.local/share/chezmoi/"$(ls ~/.local/share/chezmoi/ | fzf)" && chezmoi diff'
-alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
+#alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
+alias cme='chezmoi edit $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
 alias cmd="chezmoi diff"
 alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
 
 # esoteric aliases
 #alias startvpn='sudo openvpn --config /etc/openvpn/server/"$(ls /etc/openvpn/server/ | fzf)"'
 #alias ftp="sudo ~/.scripts/bftpd.sh"
-#alias start-conky="conky -c ~/.config/conky/conky1.config"
 alias weeb="ani-cli -q 720"
 alias wddg="w3m duckduckgo.com"
 alias open='xdg-open'
@@ -52,7 +50,7 @@ alias open='xdg-open'
 function cheat() { curl cheat.sh/$1; }   #cheat sheet
 function cht() { curl cht.sh/$1; }   #cht sheet
 function fzz() { $* | fzf -e -i | xclip -sel clip; } #fuzzy command and copy to clipboard
-function lss() { $* | less; } #pipe command to less
+function lss() { $* | xargs echo; } #pipe command to less
 function fzh() { history | fzf -e -i | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip; }
 #function fzh() { history | fzf -e -i | awk '{sub($1 FS, ""); print $0}' | xclip -sel clip; }
 
