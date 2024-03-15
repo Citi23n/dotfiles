@@ -2,7 +2,8 @@
 
 #alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
-alias nf='clear ; neofetch --ascii_distro ARCHlabs'
+#For nf, check the bottom of this file
+#alias nf='clear ; neofetch --ascii_distro ARCHlabs'
 #alias nf='clear ; neofetch --ascii_distro Anarchy'
 alias x='exit'
 alias c='clear'
@@ -37,7 +38,7 @@ alias cm="chezmoi"
 #alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
 alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
 alias cmd="chezmoi diff"
-alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
+alias cmapply="chezmoi -v apply ; $(cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes')"
 
 # esoteric aliases
 #alias startvpn='sudo openvpn --config /etc/openvpn/server/"$(ls /etc/openvpn/server/ | fzf)"'
@@ -118,7 +119,7 @@ ex ()
 
 
 
-function randy() {
+function nf() {
   randomNumber=$(shuf -i 1-179 -n 1)
   case $randomNumber in
     1)	Icon=AIX	;;
