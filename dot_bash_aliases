@@ -303,5 +303,5 @@ function nf() {
     179)	Icon=IRIX	;;
     *)	echo Unknown Error	;;
   esac
-clear ; echo $Icon ; neofetch --ascii_distro $Icon
+  clear ; echo $Icon ; neofetch --ascii_distro $Icon
 }
