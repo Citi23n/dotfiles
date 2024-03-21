@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Pull the YouTube link from the clipboard
 clipboard_content=$(xclip -selection clipboard -o)
