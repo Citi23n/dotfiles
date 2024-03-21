@@ -3,6 +3,7 @@ alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output
 alias x='exit'
 alias c='clear'
 alias lsd='ls -lh'
+alias ezd='eza -l'
 alias update="sudo pacman -Syu"
 alias clip='xclip -sel clip'
 alias cat=bat
