@@ -1,14 +1,8 @@
 # general aliases
 alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" --yes-playlist'
-#alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
-alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
-#For nf, check the bottom of this file
-#alias nf='clear ; neofetch --ascii_distro ARCHlabs'
 alias x='exit'
 alias c='clear'
 alias lsd='ls -lh'
-alias aur="distrobox enter -r aur"
-alias ubuntussh="ssh zen@192.168.3.50"
 alias update="sudo pacman -Syu"
 alias clip='xclip -sel clip'
 alias cat=bat
@@ -21,15 +15,13 @@ alias yt-mpv='mpv --ytdl-format=22'
 alias youterm="ytfzf -t --async-thumbnails -f --format-selection=simple --detach"
 
 # vim and programming aliases
-#alias zprog="cd ~/Programming/"
 alias nv="nvim"
 alias v='vim'
-#alias viminit="nvim ~/.config/nvim/init.vim"
-#alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
+alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 #alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 
 #chezmoi aliases
-alias cm="chezmoi"
+alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
 alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf -i -e) && chezmoi diff'
 alias cmd="chezmoi diff"
 alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
