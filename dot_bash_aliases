@@ -1,5 +1,4 @@
 # general aliases
-
 alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" --yes-playlist'
 #alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
@@ -9,14 +8,17 @@ alias x='exit'
 alias c='clear'
 alias lsd='ls -lh'
 alias aur="distrobox enter -r aur"
-alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
-alias yt-mpv='mpv --ytdl-format=22'
 alias ubuntussh="ssh zen@192.168.3.50"
 alias update="sudo pacman -Syu"
 alias clip='xclip -sel clip'
 alias cat=bat
 alias grep=rg
 alias llama="tgpt --provider llama2"
+
+#YouTube Aliases
+alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
+alias yt-mpv='mpv --ytdl-format=22'
+alias youterm="ytfzf -t --async-thumbnails -f --format-selection=simple --detach"
 
 # nix commands
 alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
