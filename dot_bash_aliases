@@ -5,7 +5,6 @@ alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
 #For nf, check the bottom of this file
 #alias nf='clear ; neofetch --ascii_distro ARCHlabs'
-#alias nf='clear ; neofetch --ascii_distro Anarchy'
 alias x='exit'
 alias c='clear'
 alias lsd='ls -lh'
@@ -17,6 +16,7 @@ alias clip='xclip -sel clip'
 alias cat=bat
 alias grep=rg
 alias llama="tgpt --provider llama2"
+alias yt-mpv='mpv --ytdl-format=22'
 
 # nix commands
 alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
