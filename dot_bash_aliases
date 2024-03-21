@@ -1,5 +1,6 @@
 # general aliases
 
+alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" --yes-playlist'
 #alias aliases='nvim ~/.bash_aliases && source ~/.bash_aliases'
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
 #For nf, check the bottom of this file
@@ -15,6 +16,7 @@ alias update="sudo pacman -Syu"
 alias clip='xclip -sel clip'
 alias cat=bat
 alias grep=rg
+alias llama="tgpt --provider llama2"
 
 # nix commands
 alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
