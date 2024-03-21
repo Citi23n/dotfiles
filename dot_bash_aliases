@@ -20,10 +20,6 @@ alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
 alias yt-mpv='mpv --ytdl-format=22'
 alias youterm="ytfzf -t --async-thumbnails -f --format-selection=simple --detach"
 
-# nix commands
-alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
-# alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
-
 # vim and programming aliases
 #alias zprog="cd ~/Programming/"
 alias nv="nvim"
@@ -32,17 +28,16 @@ alias v='vim'
 #alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 #alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 
+#chezmoi aliases
+alias cm="chezmoi"
+alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf -i -e) && chezmoi diff'
+alias cmd="chezmoi diff"
+alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
+
 # git aliases
 #alias gc='git checkout "$((git branch | fzf) | awk "{print $2}")"'
 #alias gc='git checkout "$((git branch | fzf) | sed "s/..//")"'
 #alias gs="git status"
-
-#chezmoi aliases
-alias cm="chezmoi"
-#alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf -i -e) && chezmoi diff'
-alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*/.git/*" | fzf) && chezmoi diff'
-alias cmd="chezmoi diff"
-alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
 
 # esoteric aliases
 #alias startvpn='sudo openvpn --config /etc/openvpn/server/"$(ls /etc/openvpn/server/ | fzf)"'
@@ -50,6 +45,10 @@ alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git co
 alias weeb="ani-cli -q 720"
 alias wddg="w3m duckduckgo.com"
 alias open='xdg-open'
+
+# nix commands
+alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
+# alias icon-nix="ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ ; ln -s /home/$USER/.nix-profile/share/icons/hicolor/scalable/apps/* /home/$USER/.local/share/icons/hicolor/scalable/apps/"
 
 # functions
 #function cheat() { curl cheat.sh/$1; }   #cheat sheet
