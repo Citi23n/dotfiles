@@ -1,0 +1,39 @@
+# Basic Settings
+set ignorecase true
+set shell sh
+#set icons true
+
+# Custom Functions
+cmd mkdir ${{
+	printf "Dirctory Name: "
+	read ans
+	mkdir $ans
+}}
+
+cmd mkfile ${{
+	printf "File Name: "
+	read ans
+	vim $ans
+}}
+
+cmd delete ${{
+	set -f
+	printf "$fx\n"
+	printf "delete?[y/n]"
+	read ans
+	[ "$ans" = "y" ] && rm -rf $fx
+}}
+
+## Mappings
+
+# Directories
+map gm cd ~/media
+map gv cd ~/media/Videos
+
+# Basic functions
+map DD delete
+
+# Custom Commands
+map md mkdir
+map mf mkfile
+
