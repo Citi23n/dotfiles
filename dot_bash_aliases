@@ -1,5 +1,5 @@
 # general aliases
-alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" --yes-playlist'
+alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(artist)s - %(title)s.%(ext)s" --yes-playlist'
 alias x='exit'
 alias c='clear'
 alias lsd='ls -lh'
