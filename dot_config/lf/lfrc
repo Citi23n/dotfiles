@@ -31,9 +31,11 @@ map gm cd ~/media
 map gv cd ~/media/Videos
 
 # Basic functions
+map d
+map x cut
 map DD delete
 
 # Custom Commands
 map md mkdir
 map mf mkfile
-
+map <enter> open
