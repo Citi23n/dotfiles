@@ -10,6 +10,9 @@ alias cat=bat
 alias grep=rg
 alias llama="tgpt --provider llama2"
 
+# semi-cheat way to run my scripts instead of putting it in ENV
+alias playlist="~/.scripts/playlist.sh"
+
 #YouTube Aliases
 alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
 alias yt-mpv='mpv --ytdl-format=22'
@@ -59,8 +62,8 @@ function cheat() {
 function cht() { curl cht.sh/$1; }   #cht sheet
 function fzz() { $* | fzf -e -i | xclip -sel clip; } #fuzzy command and copy to clipboard
 function lss() { $* | xargs echo; } #pipe command to less
-function fzh() { history | fzf -e -i | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip; }
-#function fzh() { history | fzf -e -i | awk '{sub($1 FS, ""); print $0}' | xclip -sel clip; }
+#alias fzh="history | fzf -e -i --tac | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip"
+function fzh() { history | fzf -e -i --tac | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip; }
 
 # notes system for cli
 function notes() {
