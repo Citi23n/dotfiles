@@ -4,4 +4,4 @@
 clipboard_content=$(xclip -selection clipboard -o)
 
 # run mpv with the copied YouTube link
-mpv --ytdl-format=22 $clipboard_content
+mpv --ytdl-format=22 --playlist-start=1 --playlist-end=10 $clipboard_content
