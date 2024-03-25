@@ -26,7 +26,7 @@ alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 
 #chezmoi aliases
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
-alias cme='vim $(find ~/.local/share/chezmoi/ -type f -not -path "*.git/*" -not -path "*dot_config/tmux/plugins/*" | fzf -i -e) && chezmoi diff'
+alias cme='nvim $(find ~/.local/share/chezmoi/ -type f -not -path "*.git/*" -not -path "*dot_config/tmux/plugins/*" | fzf -i -e) && chezmoi diff'
 alias cmd="chezmoi diff"
 alias cmapply="chezmoi -v apply ; cd ~/.local/share/chezmoi ; git add . ; git commit -m 'changes' ; cd ~"
 
