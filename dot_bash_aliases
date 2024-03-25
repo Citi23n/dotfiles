@@ -62,8 +62,9 @@ function cheat() {
 function cht() { curl cht.sh/$1; }   #cht sheet
 function fzz() { $* | fzf -e -i | xclip -sel clip; } #fuzzy command and copy to clipboard
 function lss() { $* | xargs echo; } #pipe command to less
-#alias fzh="history | fzf -e -i --tac | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip"
-function fzh() { history | fzf -e -i --tac | awk '{$1=""; print $0}' | sed 's/^ //' | xclip -sel clip; }
+alias fzh='history | fzf -e -i --tac | awk "{$1=""; print $0}" | sed 's/^ //' | xclip -sel clip'
+#function fzh() { history | fzf -e -i --tac | awk '{for(i=2; i<NF; i++) print $i}' xclip -sel clip; }
+# alias fzh='history | fzf -e -i --tac | awk "{for(i=2; i<NF; i++) print $i}" | xclip -sel clip'
 
 # notes system for cli
 function notes() {
