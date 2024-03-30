@@ -38,4 +38,4 @@ unset rc
 # MY CHANGES
 export PS1="\[\e[0;37m\][\[\e[0;32m\]\u\[\e[0;32m\]@\[\e[0;32m\]\h \[\e[0;33m\]\w\[\e[0;37m\]]\[\e[0;37m\]$ \[\e[0m\]" #courtesy of omar.io/ps1gen
 [ -f .bash_aliases ] && source .bash_aliases
-tmux attach || tmux
+# tmux attach || tmux
