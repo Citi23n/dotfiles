@@ -10,6 +10,10 @@ dalist[".Long talks"]=https://youtube.com/playlist?list=PLw0ioCj5tQV3FsxZkFrGf3N
 dalist["Tunes"]=https://www.youtube.com/playlist?list=PLw0ioCj5tQV2ULk1g-PLWesjddSkVOGEB
 dalist["Food"]=https://www.youtube.com/playlist?list=PLw0ioCj5tQV0ESuxkDip4lomBoqsZIIJf
 dalist["SAO Abridged"]=https://www.youtube.com/playlist?list=PLuAOJfsMefuej06Q3n4QrSSC7qYjQ-FlU
+dalist["XFCE Customization"]=https://www.youtube.com/playlist?list=PLw0ioCj5tQV3voECXcavuunHorZJHCDug
+dalist["Ansible"]=https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70
+dalist["Linux Basics sysadmin"]=https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK
+dalist["JS Data Structures"]=https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
 # Print keys on fzf
 pik=$(printf '%s\n' "${!dalist[@]}" | fzf --prompt="pick playlist>" -e -i)
 
