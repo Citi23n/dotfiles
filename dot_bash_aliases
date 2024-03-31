@@ -1,28 +1,29 @@
 # general aliases
-alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(artist)s - %(title)s.%(ext)s" --yes-playlist'
+# alias taylor='yt-dlp --ignore-errors --extract-audio --audio-format mp3 --output "%(artist)s - %(title)s.%(ext)s" --yes-playlist'
 alias x='exit'
 alias c='clear'
+alias cls='clear'
 alias lsd='ls -lh'
 alias ezd='eza -l'
 alias update="sudo pacman -Syu"
 alias clippy='xclip -sel clip'
 alias cat=bat
 alias grep=rg
-alias llama="tgpt --provider llama2"
-
+alias llama='tgpt --provider llama2'
+alias tm='tmux attach -t $(tmux ls | fzf | awk "{print $1}" )'
 # semi-cheat way to run my scripts instead of putting it in ENV
-alias playlist="~/.scripts/playlist.sh"
 
 #YouTube Aliases
 alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
 alias yt-mpv='mpv --ytdl-format=22'
 alias youterm="ytfzf -t --async-thumbnails -f --format-selection=simple --detach"
+alias playlist="~/.scripts/playlist.sh"
 
 # vim and programming aliases
 alias nv="nvim"
 alias v='vim'
 alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
-alias configs='cd $(find ~/.config/ -maxdepth 1 -type d | fzf -i -e) ; eza -l'
+alias configs='cd $(find ~/.config/ -maxdepth 1 -type d | fzf -i -e) ; clear ; eza -l'
 #alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 
 #chezmoi aliases
