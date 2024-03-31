@@ -10,7 +10,10 @@ alias clippy='xclip -sel clip'
 alias cat=bat
 alias grep=rg
 alias llama='tgpt --provider llama2'
+
+# tmux Aliases
 alias tm='tmux attach -t $(tmux ls | fzf | cut -d : -f 1)'
+alias tmn='tmux new -s'
 
 #YouTube Aliases
 alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
