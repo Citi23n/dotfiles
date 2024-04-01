@@ -3,6 +3,7 @@
 #Defaults
 export EDITOR=nvim
 export DISPLAY=:0  #allow some commands to work in tmux (including xclip)
+export LC_ALL=en_US.UTF-8
 
 #normal stuffs
 alias ls="ls --color=auto"
