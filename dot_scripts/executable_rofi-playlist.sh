@@ -18,7 +18,7 @@ dalist["JS Data Structures"]=https://www.youtube.com/playlist?list=PLC3y8-rFHvwj
 # Option1: Use fzf to select a key
 #selected_key=$(printf '%s\n' "${!dalist[@]}" | fzf --prompt="pick playlist>" -e -i)
 # Option2: Use Rofi to select a key
-selected_key=$(printf '%s\n' "${!dalist[@]}" | rofi -dmenu -p "Select a command:")
+selected_key=$(printf '%s\n' "󰗃 ${!dalist[@]}" | rofi -dmenu -p "Select a command:")
 
 #  Check if a key was selected
 if [ -n "$selected_key" ]; then
