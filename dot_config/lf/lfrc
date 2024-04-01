@@ -26,6 +26,8 @@ cmd delete ${{
 
 ## Mappings
 
+unmap m
+
 # Directories
 map gm cd ~/media
 map gv cd ~/media/Videos
