@@ -1,0 +1,11 @@
+configuration {
+	display-drun: "󱃻 Applications: ";
+	display-window: "Windows:";
+	drun-display-format: "{name}";
+	font: "JetBrainsMono Nerd Font Medium 14";
+	modi: "window,run,drun";
+	show-icons: true;
+}
+
+@theme "~/.config/rofi/nord.rasi"
+
