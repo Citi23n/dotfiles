@@ -16,18 +16,21 @@ alias kreboot='kquitapp6 plasmashell && kstart5 plasmashell'
 alias tma='tmux attach -t $(tmux ls | fzf | cut -d : -f 1)'
 alias tmn='tmux new -s'
 
+# Script Aliases
+alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
+#alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
+alias playlist="~/.scripts/playlist.sh"
+alias rf-playlist='~/.scripts/rofi-playlist.sh'
+
 #YouTube Aliases
 alias yt-vmid="yt-dlp -f 22 -o '%(uploader)s - %(title)s %(id)s.%(ext)s'"
 alias yt-mpv='mpv --ytdl-format=22'
 alias youterm="ytfzf -t --async-thumbnails -f --format-selection=simple --detach"
-alias playlist="~/.scripts/playlist.sh"
 
 # vim and programming aliases
 alias nv="nvim"
 alias v='vim'
-alias scripts='vim ~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 alias configs='cd $(find ~/.config/ -maxdepth 1 -type d | fzf -i -e) ; clear ; eza -l'
-#alias scriptstart='~/.scripts/"$(ls ~/.scripts/ | fzf)"'
 
 #chezmoi aliases
 alias aliases='nvim ~/.local/share/chezmoi/dot_bash_aliases && source ~/.local/share/chezmoi/dot_bash_aliases'
