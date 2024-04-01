@@ -5,6 +5,7 @@ configuration {
 	font: "JetBrainsMono Nerd Font Medium 14";
 	modi: "window,run,drun";
 	show-icons: true;
+	case-sensitive:false;
 }
 
 @theme "~/.config/rofi/nord.rasi"
