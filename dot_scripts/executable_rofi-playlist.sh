@@ -25,7 +25,7 @@ if [ -n "$selected_key" ]; then
     # play corresponding value  through mpv
     mpv --ytdl-format='bestvideo[height<=?720]+bestaudio[abr<=128]/best[height<=?720]' ${dalist[$selected_key]} &
     #echo Now playing $selected_key
-    notify-send "Now loading $selected_key" --icon=youtube --app-name="Playlist"
+    notify-send "Now loading $selected_key" -t 5000 --icon=youtube --app-name="Playlist"
 else
     echo "No command selected."
 fi
